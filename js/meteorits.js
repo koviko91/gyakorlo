@@ -13,23 +13,33 @@ function successAjax(xhttp) {
     // itt a json content, benne a data változóban
     var data = xhttp.responseText;
     data = JSON.parse(data);
-    var db = 1;
+    var dbid = 1;
+    var dbmass = 1;
+    var dbname = 1;
+    var dbrec = 1;
+
     table(data);
     document.querySelector('#id').addEventListener('click', function () {
-        db = db * -1;
+        dbid = dbid * -1;
+        dbmass = 1;
+        dbname = 1;
+        dbrec = 1;
         data.sort(function (a, b) {
             a.id = parseInt(a.id);
             b.id = parseInt(b.id);
             if (a.id < b.id) {
-                return db;
+                return dbid;
             } else {
-                return -db;
+                return -dbid;
             }
         });
         table(data);
     });
     document.querySelector('#mass').addEventListener('click', function () {
-        db = db * -1;
+        dbmass = dbmass * -1;
+        dbid = 1;
+        dbname = 1;
+        dbrec = 1;
         data.sort(function (a, b) {
             a.mass = parseInt(a.mass);
             b.mass = parseInt(b.mass);
@@ -40,33 +50,39 @@ function successAjax(xhttp) {
                 b.mass = 0;
             }
             if (a.mass < b.mass) {
-                return db;
+                return dbmass;
             } else {
-                return -db;
+                return -dbmass;
             }
         });
         table(data);
     });
     document.querySelector('#name').addEventListener('click', function () {
-        db = db * -1;
+        dbname = dbname * -1;
+        dbid = 1;
+        dbmass = 1;
+        dbrec = 1;
         data.sort(function (a, b) {
 
             if (a.name < b.name) {
-                return db;
+                return dbname;
             } else {
-                return -db;
+                return -dbname;
             }
         });
         table(data);
     });
     document.querySelector('#recclass').addEventListener('click', function () {
-        db = db * -1;
+        dbrec = dbrec * -1;
+        dbid = 1;
+        dbname = 1;
+        dbmass = 1;
         data.sort(function (a, b) {
 
             if (a.recclass < b.recclass) {
-                return db;
+                return dbrec;
             } else {
-                return -db;
+                return -dbrec;
             }
         });
         table(data);
