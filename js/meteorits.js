@@ -83,7 +83,6 @@ function successAjax(xhttp) {
         weight = parseInt(data[i].mass);
         var datum = new Date(data[i].year);
         if (!Number.isNaN(weight)) {
-            console.log(weight);
             sum += weight;
         }
         if (weight < minMass && !Number.isNaN(weight)) {
