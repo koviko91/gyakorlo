@@ -1,0 +1,38 @@
+th {
+    background: #213999;
+    border: 1px solid black;
+    width: 200px;
+    height: 40px;
+}
+
+tr:nth-child(even) {
+    background: #ddd;
+}
+
+#id:hover,
+#mass:hover,
+#name:hover,
+#recclass:hover {
+    background-color: cornflowerblue;
+}
+
+table {
+    border: 1px solid black;
+    box-shadow: 0px 0px 20px 0px black;
+    margin: auto;
+}
+
+div {
+    background: #888;
+    text-align: center;
+    box-shadow: 0px 0px 20px 0px black;
+    margin-top: 10px;
+    font-size: 30px;
+    border-radius: 50px;
+    width: 800px;
+    margin: auto;
+}
+
+body {
+    background: linear-gradient(to right, #27C7D1, white);
+}
